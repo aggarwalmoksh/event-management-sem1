@@ -37,14 +37,23 @@ The **Event Management System** is a web application designed for event booking 
 
 1. **Clone the repository** to your local machine:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/aggarwalmoksh/event-management-sem1.git
+   cd event-management-sem1
 2. **Navigate to both the Django and Flask directories** and install the required dependencies for both applications by running the following command in each folder:
    ```bash
    pip install -r requirements.txt
+
+3. **Create a `.env` file** in the root (`event_management/`) based on `template.env`:
+
+   ```env
+   GOOGLE_OAUTH_CLIENT_KEY=your-google-client-key
+   GOOGLE_OAUTH_CLIENT_SECRET=your-google-client-secret
+
+   
 3. **Set up the Django application**:
     1. Navigate to the Django root folder:
        ```bash
-       cd <django-root-folder>
+       cd district_events
 
     2. Apply database migrations:
        ```bash
@@ -57,7 +66,7 @@ The **Event Management System** is a web application designed for event booking 
 4. **Set up the Flask application**:
     1. Navigate to the Flask application folder:
        ```bash
-       cd <flask-folder>
+       cd flask-api
 
     2. Set the FLASK_APP environment variable:
        ```bash
@@ -83,6 +92,12 @@ Now, both the Django application and Flask application should be running locally
   http://127.0.0.1:5000
   The Contact Us and About Us pages are available here, integrated via API with the Django backend.
 
+  
+## Environment Variables
+   To keep sensitive information safe, credentials are stored in a .env file, which is not committed to GitHub (thanks to .gitignore).
+   Please refer to template.env for the required structure and variables. Create your own .env file based on it.
+
+   
 ## Credits and Acknowledgments
   ### Moksh Aggarwal (Team Leader)
   #### Mayur Mittal
